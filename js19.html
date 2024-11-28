@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Basic JavaScript Input Methods</title>
+</head>
+<body>
+<h3>JavaScript Input Methods Example</h3>
+<script>
+let name = prompt("Please enter your name:");
+console.log("Hello, " + name);
+let isConfirmed = confirm("Do you agree to proceed?");
+console.log("User agreed:", isConfirmed);
+</script>
+<label for="inputField">Enter something:</label>
+<input type="text" id="inputField">
+<button onclick="getInput()">Submit</button>
+<script>
+function getInput() {
+let userInput = document.getElementById("inputField").value;
+console.log("Input from text field:", userInput);
+}
+</script>
+</body>
+</html>

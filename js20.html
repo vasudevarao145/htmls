@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Voter Eligibility</title>
+<style>
+table {
+width: 50%;
+border-collapse: collapse;
+margin: 20px auto;
+}
+th, td {
+padding: 10px;
+border: 1px solid #333;
+text-align: center;
+}
+th {
+background-color: #4CAF50;
+color: white;
+}
+.eligible {
+color: green;
+}
+.not-eligible {
+color: red;
+}
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">Voter Eligibility Check</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Eligibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td id="voterName"></td>
+<td id="voterAge"></td>
+<td id="voterEligibility"></td>
+</tr>
+</tbody>
+</table>
+<script>
+let name = prompt("Enter your name:");
+let age = prompt("Enter your age:");
+document.getElementById("voterName").textContent = name;
+document.getElementById("voterAge").textContent = age;
+let eligibilityText;
+if (age >= 18) {
+eligibilityText = "Eligible to Vote";
+document.getElementById("voterEligibility").classList.add("eligible");
+} else {
+eligibilityText = "Not Eligible to Vote";
+document.getElementById("voterEligibility").classList.add("not-eligible");
+}
+document.getElementById("voterEligibility").textContent = eligibilityText;
+</script>
+</body>
+</html>

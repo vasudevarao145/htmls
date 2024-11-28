@@ -1,0 +1,16 @@
+<html>
+<body>
+<button onclick="reverseString()">Reverse String</button>
+<script>
+function reverseString() {
+let inputString = prompt("Enter a string:");
+if (inputString) {
+let reversedString = inputString.split('').reverse().join('');
+alert("Reversed String: " + reversedString);
+} else {
+alert("Please enter a valid string.");
+}
+}
+</script>
+</body>
+</html>

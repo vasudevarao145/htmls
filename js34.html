@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Denomination Calculator</title>
+<style>
+    .result{
+color: green;
+}
+</style>
+</head>
+<body>
+<h2>Denomination Calculator</h2>
+<label for="amount">Enter Amount: </label>
+<input type="number" id="amount" required>
+<button onclick="calculateDenominations()">Calculate</button>
+<p id="result" ></p>
+<script>
+function calculateDenominations() {
+var amount = parseInt(document.getElementById('amount').value);
+var denominations = [100, 50, 20, 10, 5, 2, 1];
+var result = " ";
+for (var i = 0; i < denominations.length; i++) {
+var count = Math.floor(amount / denominations[i]);
+amount %= denominations[i]; 
+if (count > 0) {
+result += count + " x " + denominations[i] + " Rs, ";
+}
+}
+document.getElementById('result').innerText = result.slice(0, -2); 
+}
+</script>
+</body>
+</html

@@ -1,0 +1,16 @@
+<html>
+<body>
+<button onclick="validateEmail()">ValidateEmail</button>
+<script>
+function validateEmail() {
+let email = prompt("Enter your email address:");
+let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (emailRegex.test(email)) {
+alert("Valid email address.");
+} else {
+alert("Invalid email address. Please enter a valid one.");
+}
+}
+</script>
+</body>
+</html>

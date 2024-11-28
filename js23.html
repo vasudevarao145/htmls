@@ -1,0 +1,19 @@
+<html>
+<body>
+<button onclick="findLargest()">Enter Numbers</button>
+<script>
+function findLargest() {
+let numbers = [
+parseInt(prompt("Enter first number:")),
+parseInt(prompt("Enter second number:")),
+parseInt(prompt("Enter third number:"))
+];
+if (numbers.includes(NaN)) {
+alert("Please enter valid numbers.");
+} else {
+alert("LARGEST NUMBER: " + Math.max(...numbers));
+}
+}
+</script>
+</body>
+</html>

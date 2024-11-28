@@ -1,0 +1,21 @@
+<html>
+<body>
+<button onclick="findLargest()">Enter Numbers</button>
+<script>
+function findLargest() {
+let nums = [
+parseInt(window.prompt("Enter first number:")),
+parseInt(window.prompt("Enter second number:")),
+parseInt(window.prompt("Enter third number:"))
+];
+if (nums.some(isNaN)) {
+window.alert("Please enter valid numbers.");
+} else {
+let result = (nums[0] === nums[1] && nums[1] === nums[2]) ? 
+"EQUAL NUMBERS" : "LARGEST NUMBER: " + Math.max(...nums);
+window.alert(result);
+}
+}
+</script>
+</body>
+</html>
